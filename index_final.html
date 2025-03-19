@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Informatique</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    .card-img-top {
+        height: 300px;
+        object-fit: cover;
+    }
+    .carousel-indicators button {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: gray;
+        border: none;
+    }
+    .carousel-indicators .active {
+        background-color: black;
+    }
+    .navbar-nav {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+     /* Garde l'entête en gris foncé */
+  .navbar {
+    background-color: #8d95a0; /* Gris foncé pour l'entête */
+  }
+
+    .navbar-nav .nav-link {
+        color: #6f42c1 !important; /* Changer la couleur des liens en violet */
+    }
+    .navbar .navbar-toggler-icon {
+        background-color: white; /* Changer la couleur du toggler en blanc */
+    }
+    .team-member img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 15px;
+    }
+    .team-member {
+        text-align: center;
+    }
+    .contact-info {
+        margin-bottom: 10px;
+    }
+    .contact-info i {
+        margin-right: 10px;
+        color: #007bff;
+    }
+    .map-container {
+        width: 100%;
+        max-width: 400px;
+    }
+    .map-container iframe {
+        width: 100%;
+        height: 300px;
+        border: 0;
+    }
+    .btn-signup {
+        background-color: #6f42c1; /* Couleur violette pour le bouton */
+        color: white !important;
+    }
+    .btn-outline-success {
+        background-color: #28a745 !important; /* Couleur verte pour le bouton Search */
+        color: white !important; /* Texte en blanc */
+        border: none;
+    }
+    @media (max-width: 991.98px) {
+        .team-section {
+            display: none;
+        }
+    }
+    @media (max-width: 767.98px) {
+        .card {
+            flex-direction: column !important;
+            align-items: center;
+        }
+        .card-img-top {
+            width: 100%;
+            height: 300px;
+            margin-right: 0;
+        }
+        .card-body {
+            width: 100%;
+            text-align: center;
+        }
+        .contact-map-section {
+            flex-direction: column-reverse;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991.98px) {
+        .card {
+            flex-direction: row !important;
+            align-items: center;
+        }
+        .card-img-top {
+            width: 40%;
+            height: auto;
+            margin-right: 10px;
+        }
+        .card-body {
+            width: 60%;
+            text-align: left;
+            padding: 10px;
+        }
+        .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            margin-bottom: 15px;
+        }
+        .card-title {
+            font-size: 1.2rem;
+        }
+        .card-text {
+            font-size: 0.9rem;
+        }
+        .btn {
+            font-size: 0.9rem;
+            padding: 5px 10px;
+        }
+    }
+    /* Modification pour le footer sur mobile */
+    @media (max-width: 767.98px) {
+        footer .row {
+            flex-direction: column-reverse; /* Inverser l'ordre des éléments */
+        }
+    }
+
+    /* Modification de l'entête en gris foncé */
+    .navbar {
+        background-color: #343a40; /* Gris foncé pour l'entête */
+    }
+</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="images/logo.webp" alt="Logo" class="img-fluid" style="max-height: 50px;" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link" href="#">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit" style="color: white;">Search</button>
+                </form>
+                <a href="#" class="btn btn-signup ms-3">sign up</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Carrousel d'images -->
+  <section class="container mt-5">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel" style="max-width: 800px; margin: auto;">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/image1.jpg" class="d-block w-100" alt="Image 1">
+        </div>
+        <div class="carousel-item">
+          <img src="images/image2.jpg" class="d-block w-100" alt="Image 2">
+        </div>
+        <div class="carousel-item">
+          <img src="images/image3.jpg" class="d-block w-100" alt="Image 3">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Précédent</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Suivant</span>
+      </button>
+    </div>
+  </section>
+  <!-- Cartes -->
+  <section class="container mt-5">
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="images/card1.jpg" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px;" alt="Image 1">
+          <div class="card-body">
+            <h3>Tips</h3>
+            <p>COMMENT REUSSIR SA RECONVERSION EN DEVELOPPEUR WEB?</p>
+            <a href="#" class="btn btn-primary">Voir plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="images/card2.jpg" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px;" alt="Image 2">
+          <div class="card-body">
+            <h3>Decryptage</h3>
+            <p>POURQUOI COMMENCER LE CODE PAR HTML ET CSS?</p>
+            <a href="#" class="btn btn-primary">Voir plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3">
+          <img src="images/card3.jpg" class="card-img-top rounded-circle mx-auto" style="width: 150px; height: 150px;" alt="Image 3">
+          <div class="card-body">
+            <h3>Decryptage</h3>
+            <p> LES 10 LANGAGES DE PROGRAMMATION LES PLUS UTILISES</p>
+            <a href="#" class="btn btn-primary">Voir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Notre équipe -->
+  <section class="container mt-5 bg-light p-4 team-section">
+    <h2 class="text-center">Notre équipe</h2>
+    <div class="row text-center">
+      <div class="col-md-4 mb-4">
+        <div class="card p-3" style="height: 100%;">
+          <img src="images/membre1.jpg" class="card-img-top rounded-circle mx-auto" style="width: 120px; height: 120px;" alt="Membre 1">
+          <div class="card-body">
+            <h5 class="card-title">Jack Dane</h5>
+            <p class="card-text">Développeur Front-End. Jack transforme des idées en interfaces intuitives et réactives. Il croit que l'esthétique et la fonctionnalité doivent toujours aller de pair pour offrir une expérience inoubliable.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3" style="height: 100%;">
+          <img src="images/membre2.jpg" class="card-img-top rounded-circle mx-auto" style="width: 120px; height: 120px;" alt="Membre 2">
+          <div class="card-body">
+            <h5 class="card-title">Sara Loren</h5>
+            <p class="card-text">Développeuse Backend. Sarah veille à ce que toutes les fonctionnalités de l'application soient solidement connectées. Elle se spécialise dans la gestion des bases de données et la création d'API performantes.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card p-3" style="height: 100%;">
+          <img src="images/membre3.jpg" class="card-img-top rounded-circle mx-auto" style="width: 120px; height: 120px;" alt="Membre 3">
+          <div class="card-body">
+            <h5 class="card-title">Lucien Dubois</h5>
+            <p class="card-text">Chef de projet. Lucien supervise la gestion des projets, en garantissant que chaque étape se déroule comme prévu. Il est un expert dans l'organisation et la gestion des délais.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </section>
+  
+  <!-- Footer -->
+  <footer class="container-fluid bg-dark text-white py-4">
+    <div class="row">
+      <div class="col-md-6">
+        <h5>Contact</h5>
+        <p><i class="bi bi-telephone"></i> Telephone: 01 23 45 67 89</p>
+        <p><i class="bi bi-envelope"></i> email: contact@monsite.com</p>
+        <p><i class="bi bi-geo-alt"></i> code postal: 75001 Paris</p>
+      </div>
+      <div class="col-md-6">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=ENSET+Mohammedia&key=AIzaSyBMz15HxN8dq3bdkbJMwra8wEyD60lzmGA" width="600" height="400" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
